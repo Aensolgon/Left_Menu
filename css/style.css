@@ -96,6 +96,11 @@ ul li{
 .logo-mobile{
     display: none;
 }
+@media screen and (max-width: 1440px) {
+    .push-left{
+        transform: translate3d(-38vw, 0, 0);
+    }
+}
 
 @media screen and (max-width: 768px) {
     .head{
