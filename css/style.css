@@ -2,7 +2,22 @@ html, body{
     margin:0;
     padding:0;
 }
+a{
+    transition: .5s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: "FoundersGrotesk", sans-serif;
+}
+.head{
+    
+    display: none;
+}
+a:hover{
+    color: #70706e;
+}
 nav{
+    padding-left: 20px;
     position: fixed;
     width: calc(35vw + 80px);
     height: 100vh;
@@ -14,7 +29,8 @@ nav{
     background: #fff;
 }
 ul{
-    padding: 100px;
+    padding: 40px;
+    padding-left: 0;
     list-style: none;
 }
 ul li{
@@ -23,7 +39,7 @@ ul li{
     line-height: 1.5;
 }
 .push-left{
-    transform: translate3d(-35vw, 0, 0);
+    transform: translate3d(-37vw, 0, 0);
 }
 
 .menu-btn span,
@@ -75,13 +91,24 @@ ul li{
     background: #fff;
     position: absolute;
     transition: .5s ease;
-    right: 10px;
+    right: 15px;
 }
 .logo-mobile{
     display: none;
 }
 
 @media screen and (max-width: 768px) {
+    .head{
+        display: block;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 20px;
+        padding-left: 0;
+    }
+    .logo{
+        display: none;
+    }
     .push-left {
         transform: translate3d(-60vw, 0, 0);
     }
@@ -99,22 +126,54 @@ ul li{
     opacity: 1;
 }
 .open{
-    width: calc(85vw + 80px);
+    width: calc(85vw + 10vw);
 }
 .menu-btn-active span{
     height: 0;
 }
 .menu-btn-active{
-    left: calc(96% - 80px);
+    animation-duration: .6s;
+    animation-name: slidein;
+    left: calc(97vw - 10vw);
 }
+
+@keyframes slidein {
+    from{
+        left: 0;
+    }
+     to{
+         left: calc(97vw - 10vw);
+     }
+ }
 
     
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 448px) {
+    .head{
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 20px;
+        padding-left: 0;
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
     .open{
-        width: calc(75vw + 80px);
+        width: calc(83vw + 10vw);
     }
     .menu-btn-active{
-        left: calc(93% - 80px);
+        animation-duration: .6s;
+        animation-name: slidein;
+        left: calc(90vw - 10vw); 
+    }
+    @keyframes slidein {
+       from{
+           left: 0;
+       }
+        to{
+            left: calc(90vw - 10vw);
+        }
     }
 }
