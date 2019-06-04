@@ -11,13 +11,16 @@ nav{
     transition: .5s ease;
     z-index: 9999;
     left: 0;
-    background: #000;
+    background: #fff;
 }
 ul{
     padding: 100px;
+    list-style: none;
 }
 ul li{
-    color: #fff;
+    color: #000;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 .push-left{
     transform: translate3d(-35vw, 0, 0);
@@ -30,7 +33,7 @@ ul li{
     position: absolute;
     height: 2px;
     width: 25px;
-    background-color: #fff;
+    background-color: #000;
     opacity: 1;
    
 }
@@ -64,4 +67,54 @@ ul li{
 }
 .menu-btn-active span:after{
     transform: rotate(-45deg);
+}
+.logo,
+.logo-mobile{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    position: absolute;
+    transition: .5s ease;
+    right: 10px;
+}
+.logo-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .push-left {
+        transform: translate3d(-60vw, 0, 0);
+    }
+    .logo-mobile{
+        display: block;
+    }
+    .menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: #000;
+    opacity: 1;
+}
+.open{
+    width: calc(85vw + 80px);
+}
+.menu-btn-active span{
+    height: 0;
+}
+.menu-btn-active{
+    left: calc(96% - 80px);
+}
+
+    
+}
+@media screen and (max-width: 426px) {
+    .open{
+        width: calc(75vw + 80px);
+    }
+    .menu-btn-active{
+        left: calc(93% - 80px);
+    }
 }
