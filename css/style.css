@@ -1,0 +1,71 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+nav{
+    position: fixed;
+    width: calc(35vw + 80px);
+    height: 100vh;
+    overflow: auto;
+    top:0;
+    transition: .5s ease;
+    z-index: 9999;
+    left: 0;
+    background: #000;
+}
+ul{
+    padding: 100px;
+}
+ul li{
+    color: #fff;
+}
+.push-left{
+    transform: translate3d(-35vw, 0, 0);
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+.menu-btn span::before,
+.menu-btn span::after{
+    content: '';
+    display: block;
+    transition: 0.2s;
+}
+.menu-btn span::before{
+    transform: translateY(-7px);
+}
+.menu-btn span::after{
+    transform: translateY(7px);
+}
+.menu-btn{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+    position: fixed;
+    height: 63px;
+    z-index: 10000;
+    justify-content: center;
+}
+.menu-btn-active span{
+    height: 0;
+}
+.menu-btn-active span:before{
+    transform: rotate(45deg);
+}
+.menu-btn-active span:after{
+    transform: rotate(-45deg);
+}
