@@ -17,7 +17,7 @@ a:hover{
     color: #70706e;
 }
 nav{
-    padding-left: 20px;
+    padding-left: 40px;
     position: fixed;
     width: calc(35vw + 80px);
     height: 100vh;
@@ -39,7 +39,7 @@ ul li{
     line-height: 1.5;
 }
 .push-left{
-    transform: translate3d(-37vw, 0, 0);
+    transform: translate3d(-40vw, 0, 0);
 }
 
 .menu-btn span,
@@ -91,7 +91,7 @@ ul li{
     background: #fff;
     position: absolute;
     transition: .5s ease;
-    right: 15px;
+    right: 10px;
 }
 .logo-mobile{
     display: none;
@@ -126,7 +126,7 @@ ul li{
     opacity: 1;
 }
 .open{
-    width: calc(85vw + 10vw);
+    width: calc(85vw + 7vw);
 }
 .menu-btn-active span{
     height: 0;
@@ -161,7 +161,7 @@ ul li{
         display: none;
     }
     .open{
-        width: calc(83vw + 10vw);
+        width: calc(78vw + 10vw);
     }
     .menu-btn-active{
         animation-duration: .6s;
